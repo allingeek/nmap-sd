@@ -12,7 +12,7 @@ This tool is most useful if you can agree to run only a single service per port.
 
 ## Behavior
 
-The discovery will run every 30 seconds and take some time to perform the task itself. The runtime currently scales O(N*M) where N is the number of hosts on the overlay network and M is the number of ports that you are scanning. By default, after each pass the script will generate a JSON encoded line to STDOUT.
+The discovery will run every 30 seconds and take some time to perform the task itself. The runtime currently scales O(N*M) where N is the number of hosts on the overlay network and M is the number of ports that you are scanning. By default, after each pass the script will generate a JSON encoded line to STDOUT. The script will additionally write an authoritative report (named, "report") to a volume mounted at /nmap-sd.
 
 ## Examples
 

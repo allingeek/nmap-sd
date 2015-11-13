@@ -17,6 +17,6 @@ while true; do
   done
   out="$out }"
   echo $out
-
+  echo $out > /nmap-sd/report
   sleep 30
 done
