@@ -10,4 +10,9 @@ I think service registration and discovery tools are a bit heavy for overlay net
 
 This tool is most useful if you can agree to run only a single service per port. Meaning that all instances of service A run on port Z and instances of service B run on port Y, and so on...
 
+## Examples
 
+Suppose you wanted to discover all the nodes on an overlay that were listening on port 80, 2000, 3000, 4000, and 5000. Running the following command would generate a JSON map with the results:
+
+    docker run -it --net demomesh allingeek/nmap-sd 80 2000 3000 4000 5000
+    # { "80":[], "2000":["10.0.0.5"], "3000":[], "4000":[], "5000":["10.0.0.8"]}
