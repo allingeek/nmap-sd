@@ -18,6 +18,8 @@ The discovery will run every 30 seconds and take some time to perform the task i
 
 Run one of these along side your LB and some LB configuration sidekick. The LB configuration sidekick should read the report at /nmap-sd/report and munge the map into an appropriate upstream configuration (which has already been injected into your LB container), and send a SIGHUP to the LB if config has changed. 
 
+Use the repo on Docker Hub allingeek/nmap-sd.
+
 Note: I'm going to write a few of these when I get a second.
 
 ## Examples
