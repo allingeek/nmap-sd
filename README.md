@@ -14,6 +14,12 @@ This tool is most useful if you can agree to run only a single service per port.
 
 The discovery will run every 30 seconds and take some time to perform the task itself. The runtime currently scales O(N*M) where N is the number of hosts on the overlay network and M is the number of ports that you are scanning. By default, after each pass the script will generate a JSON encoded line to STDOUT. The script will additionally write an authoritative report (named, "report") to a volume mounted at /nmap-sd.
 
+## How Should I Use This?
+
+Run one of these along side your LB and some LB configuration sidekick. The LB configuration sidekick should read the report at /nmap-sd/report and munge the map into an appropriate upstream configuration (which has already been injected into your LB container), and send a SIGHUP to the LB if config has changed. 
+
+Note: I'm going to write a few of these when I get a second.
+
 ## Examples
 
 Suppose you wanted to discover all the nodes on an overlay that were listening on port 80, 2000, 3000, 4000, and 5000. Running the following command would generate a JSON map with the results:
