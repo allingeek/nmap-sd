@@ -1,6 +1,6 @@
 # Service Discovery for Passive Registration
-
-Run as a Docker container, the included script will scan the attached /24 network for hosts listening on the specified ports and print a port=>[]address map.
+ 
+Run as a Docker container, the included script will scan the attached /24 network for hosts listening on the specified ports and print a port=>[]address map. 
 
 ## Why?
 
